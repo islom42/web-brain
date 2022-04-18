@@ -17,3 +17,8 @@ output => Assalamu alekum
 let str = "Ass#a###lamu al#e#kum";
 str = str.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
 console.log(str);
+
+//================================================
+// Removing all space beetween words task from during lesson
+let stringEmpty = "Assalamu alekum The red fox WebBrain Academy"
+console.log(stringEmpty.replace(/ /g, ""));
