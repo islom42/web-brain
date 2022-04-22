@@ -22,3 +22,5 @@ console.log(str);
 // Removing all space beetween words task from during lesson
 let stringEmpty = "Assalamu alekum The red fox WebBrain Academy"
 console.log(stringEmpty.replace(/ /g, ""));
+stringEmpty[0] = "V";
+console.log(stringEmpty);
