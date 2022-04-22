@@ -98,5 +98,23 @@ Write a JS programm to input marks of five subjects Phsics, Chemistry, Biology, 
 
    Percentage <> 40% : Grade F
 */
+let marks = [89, 89, 89, 89, 89];
+let averageMark = 0;
 
-// !important => I will do it later
+const getAverageMark = function (marks) {
+  for (let mark of marks) {
+    averageMark += mark / marks.length;
+  }
+  return averageMark;
+};
+
+// calculate persantage
+const calcPersangeOfMark = function (mark) {
+  console.log(`Average mark in persantage ${mark}`);
+  if (mark < 60) return "E";
+  if (mark < 70) return "D";
+  if (mark < 80) return "C";
+  if (mark < 90) return "B";
+  return "A";
+};
+console.log(calcPersangeOfMark(getAverageMark(marks)));
