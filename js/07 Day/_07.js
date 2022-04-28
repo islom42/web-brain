@@ -12,7 +12,7 @@ function reversedWord(str = "webbrain") {
   }
   return reverWord;
 }
-console.log(reversedWord());
+// console.log(reversedWord());
 
 //!6
 function maxNumber(num1, num2, num3) {
@@ -20,20 +20,29 @@ function maxNumber(num1, num2, num3) {
   if (num2 > num1 && num2 > num3) return num2;
   return num3;
 }
-console.log(maxNumber(5, 3, 4));
+// console.log(maxNumber(5, 3, 4));
 
 function minNumber(num1, num2, num3) {
   if (!(num1 > num2 && num1 > num3)) return num1;
   if (num2 < num1 && num2 < num3) return num2;
   return num3;
 }
-console.log(minNumber(-60, -55, -5));
+// console.log(minNumber(-60, -55, -5));
 
 //!7
-let string = "#Web##brain# academy";
-let newString = " "
-function changeSymbol(sym1 = "(", sym2 = ")") {
-  return string.replace("#", sym1).replace("#", sym2).replace("#", sym1).replace("#", sym2)
+//let string = "#Web##brain# a#cadem#y";
+let string = "If I were a perfect developer #job profession#, I could do this exercise #mission# #activity#"
+function changeSymbol(str) {
+  let count = 1;
+  for (let i = 0; i <= str.length; i++) {
+    if (count % 2 === 0) {
+      count++;
+      str = str.replace("#", ")");
+    } else {
+      count++;
+      str = str.replace("#", "(");
+    }
+  }
+  console.log(str);
 }
-
-console.log(changeSymbol(string));
+changeSymbol(string);
